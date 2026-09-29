@@ -6,7 +6,7 @@ Problem Statement
 
 A government database stores the following identification numbers:
 
-"A102, A25, A7, B100, B12, A120, B3, A45"
+A102, A25, A7, B100, B12, A120, B3, A45
 
 The task is to:
 
@@ -72,9 +72,37 @@ ID| BST Comparisons| Linear Comparisons| Result
 A120| 4| 6| Found
 B3| 6| 7| Found
 A45| 5| 8| Found
-C10| 2| 8| Not Found
+C10| 4| 8| Not Found
 
 The number of comparisons is counted during program execution.
+
+---
+
+Trace Table
+
+BST Insertion Trace
+
+Step| ID Inserted| Comparison Path| Position
+1| A102| —| Root
+2| A25| A25 > A102| Right of A102
+3| A7| A7 > A102, A7 > A25| Right of A25
+4| B100| B100 > A102, > A25, > A7| Right of A7
+5| B12| B12 > A102, > A25, > A7, > B100| Right of B100
+6| A120| A120 > A102, A120 > A25, A120 < A7| Left of A7
+7| B3| B3 > A102, > A25, > A7, > B100, > B12| Right of B12
+8| A45| A45 > A102, > A25, > A7, A45 < B100, A45 < B12, A45 > A120| Right of A120
+
+Search Trace
+
+Search ID| BST Comparisons| Linear Comparisons| Result
+A120| 4| 6| Found
+B3| 6| 7| Found
+A45| 5| 8| Found
+C10| 4| 8| Not Found
+
+Trace Observation
+
+BST search follows the appropriate path through the tree, while linear search checks the IDs sequentially from the beginning. Therefore, the number of comparisons depends on the BST structure for BST Search and on the position of the key in the array for Linear Search.
 
 ---
 
