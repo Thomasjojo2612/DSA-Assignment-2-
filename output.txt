@@ -1,0 +1,30 @@
+GOVERNMENT DATABASE - BST
+--------------------------
+
+Identification Numbers:
+A102 A25 A7 B100 B12 A120 B3 A45
+
+Inorder Traversal:
+A102 A120 A25 A45 A7 B100 B12 B3
+
+BST Height: 6
+
+Search Comparison:
+---------------------------------------------
+ID         BST Search      Linear Search
+---------------------------------------------
+A120       4               6
+  BST Result: A120 found
+  Linear Result: A120 found
+
+B3         6               7
+  BST Result: B3 found
+  Linear Result: B3 found
+
+A45        5               8
+  BST Result: A45 found
+  Linear Result: A45 found
+
+C10        2               8
+  BST Result: C10 not found
+  Linear Result: C10 not found
